@@ -36,9 +36,9 @@ export class IntroPage implements OnInit {
     }
   ];
   constructor(private router: Router, private storage: Storage) {}
-  finish() {
-    this.storage.create();
-    this.storage.set('isIntroShowed', true);
+  async finish() {
+    await this.storage.create();
+    await this.storage.set('isIntroShowed', true);
     this.router.navigateByUrl('/home');
   }
   ngOnInit() {
