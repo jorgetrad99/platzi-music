@@ -1,27 +1,13 @@
 <ion-content class="ion-padding">
   <ion-slides pager="true" [options]="slideOpt">
-    <ion-slide>
+    <ion-slide *ngFor="let slide of slides">
       <ion-icon name="close"></ion-icon>
       <img src="assets/img/logo.png" alt="Platzi Master Logo">
-      <h1>Escucha tu música</h1>
-      <h2>En cualquier lugar</h2>
-      <p>Los mejores álbumes, las mejores canciones. Escucha y comparte en cualquier momento, a todas horas</p>
-      <ion-icon name="play"></ion-icon>
+      <h1>{{ slide.title }}</h1>
+      <h2>{{ slide.subtitle }}</h2>
+      <p>{{ slide.description }}</p>
+      <ion-icon name="{{ slide.icon }}"></ion-icon>
     </ion-slide>
-    <ion-slide>
-      <ion-icon name="close"></ion-icon>
-      <img src="assets/img/logo.png" alt="Platzi Master Logo">
-      <h1>Disfruta de nuestro incrible reproductor</h1>
-      <h2>DE VIDEOS INCREIBLES</h2>
-      <p>Entra al modo video de nuestro reproductor y obtén acceso a clips, documentales y making offs increibles de tu artista favorito.</p>
-      <ion-icon name="videocam"></ion-icon>
-    </ion-slide>
-    <ion-slide><ion-icon name="close"></ion-icon>
-      <img src="assets/img/logo.png" alt="Platzi Master Logo">
-      <h1>ACCEDE al exclusivo</h1>
-      <h2>MODO DEPORTE</h2>
-      <p>Crea una playlist basada enn tu actividad física. Ten reportes y acceso a lo que necesites, integrado conn GPS</p>
-      <ion-icon name="bicycle"></ion-icon>
-    </ion-slide>
+
   </ion-slides>
 </ion-content>

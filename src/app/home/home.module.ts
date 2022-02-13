@@ -16,11 +16,4 @@ import { HomePageRoutingModule } from './home-routing.module';
   ],
   declarations: [HomePage]
 })
-export class HomePageModule {
-  slideOps = {
-    initialSlide: 0,
-    slidesPerView: 1,
-    centeredSlides: true,
-    speed: 400
-  };
-}
+export class HomePageModule {}
